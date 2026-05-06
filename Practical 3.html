@@ -1,0 +1,153 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Indian Metro Cities Tourism</title> 
+    <style> 
+        body { 
+            font-family: Arial; 
+            background-color: #f0f8ff; 
+            margin: 0; 
+        } 
+        header { 
+            background-color: darkblue; 
+            color: white; 
+            text-align: center; 
+            padding: 15px; 
+        } 
+        nav { 
+            background-color: lightgray; 
+            padding: 10px; 
+            text-align: center; 
+        } 
+        nav a { 
+            margin: 10px; 
+            text-decoration: none; 
+            color: black; 
+            font-weight: bold; 
+            cursor: pointer; 
+        } 
+        nav a:hover { 
+            color: darkblue; 
+        } 
+        .page { 
+            display: none; 
+            padding: 20px; 
+            text-align: center; 
+        } 
+        .active { 
+            display: block; 
+        } 
+        img { 
+            width: 100%; 
+            max-width: 400px; 
+            height: auto; 
+            border-radius: 10px; 
+            margin-top: 10px; 
+            box-shadow: 2px 2px 10px gray; 
+        } 
+        footer { 
+            background-color: darkblue; 
+            color: white; 
+            text-align: center; 
+            padding: 10px; 
+            position: fixed; 
+            bottom: 0; 
+            width: 100%; 
+        } 
+        button { 
+            margin-top: 20px; 
+            padding: 8px 15px; 
+            background-color: darkblue; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+        } 
+    </style> 
+    <script> 
+        function showPage(pageId) { 
+            var pages = document.getElementsByClassName("page"); 
+            for (var i = 0; i < pages.length; i++) { 
+                pages[i].classList.remove("active"); 
+            } 
+            document.getElementById(pageId).classList.add("active"); 
+        } 
+    </script> 
+</head> 
+<body> 
+<header> 
+    <h1>Explore Indian Metro Cities</h1> 
+    <p>Click a city to view Metro details</p> 
+</header> 
+<nav> 
+    <a onclick="showPage('home')">Home</a> 
+<a onclick="showPage('mumbai')">Mumbai</a> 
+<a onclick="showPage('delhi')">Delhi</a> 
+<a onclick="showPage('bangalore')">Bangalore</a> 
+<a onclick="showPage('kolkata')">Kolkata</a> 
+</nav> 
+<!-- HOME --> 
+<div id="home" class="page active"> 
+<h2>Welcome</h2> 
+<p>Select a city to see metro information.</p> 
+</div> 
+<!-- MUMBAI --> 
+<div id="mumbai" class="page"> 
+<h2>Mumbai Metro</h2> 
+<img 
+src="https://www.thehosteller.com/_next/image/?url=https%3A%2F%2Fstatic.thehost
+eller.com%2Fhostel%2Fimages%2Fimage.jpg%2Fimage
+1735884840040.jpg&w=2048&q=75"> 
+<p>Mumbai Metro is a rapid transit system serving Mumbai.</p> 
+<ul> 
+<li>Started: 2014</li> 
+<li>Main Route: Versova – Ghatkopar</li> 
+<li>Modern AC trains</li> 
+</ul> 
+<button onclick="showPage('home')">Back</button> 
+</div> 
+<!-- DELHI --> 
+<div id="delhi" class="page"> 
+<h2>Delhi Metro</h2> 
+<img src="https://i.ytimg.com/vi/Qs8FldTQ338/hq720.jpg?sqp=
+oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAH12nLW
+Z8hKargf25Ac_1FkpHbRg"> 
+<p>Delhi Metro is one of the largest metro networks in India.</p> 
+<ul> 
+<li>Started: 2002</li> 
+<li>Covers NCR region</li> 
+<li>Fast and clean</li> 
+</ul> 
+<button onclick="showPage('home')">Back</button> 
+</div> 
+<!-- BANGALORE --> 
+<div id="bangalore" class="page"> 
+<h2>Namma Metro (Bangalore)</h2> 
+<img 
+src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Bengaluru_Cantonment_r
+ailway_station_%28Dec_%2723%29.jpg"> 
+<p>Bangalore Metro is known as Namma Metro.</p> 
+<ul> 
+<li>Started: 2011</li> 
+<li>Purple & Green Lines</li> 
+<li>Modern system</li> 
+</ul> 
+<button onclick="showPage('home')">Back</button> 
+</div> 
+<!-- KOLKATA --> 
+<div id="kolkata" class="page"> 
+<h2>Kolkata Metro</h2> 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMQZ
+t6NZOs1rm02eX516g9PqtJryVRsdMgw&s"> 
+<p>Kolkata Metro is the first metro system in India.</p> 
+<ul> 
+<li>Started: 1984</li> 
+<li>Oldest metro in India</li> 
+<li>North-South corridor</li> 
+</ul> 
+<button onclick="showPage('home')">Back</button> 
+</div> 
+<footer> 
+<p>© 2026 Indian Tourism</p> 
+</footer> 
+</body> 
+</html> 
